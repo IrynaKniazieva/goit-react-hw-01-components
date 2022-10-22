@@ -38,9 +38,13 @@ Profile.propTypes = {
     username: propTypes.string.isRequired,
     tag: propTypes.string.isRequired,
     location: propTypes.string.isRequired,
-    stats: {
+    stats: propTypes.exact({
         followers: propTypes.number.isRequired,
         views: propTypes.number.isRequired,
         likes: propTypes.number.isRequired,
+      })
+    
+    
     }
-}
+
+

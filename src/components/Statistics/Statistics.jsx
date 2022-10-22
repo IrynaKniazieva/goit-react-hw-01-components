@@ -5,10 +5,10 @@ export const Statistics = ({title, stats}) => {
     <h2 class="title">{title}</h2>
   
     <ul class="stat-list">
-        {stats.map(stat => (
-            <li key={stats.id}>
-            <span class="label">{stat.label}</span>
-            <span class="percentage">{stat.percentage}%</span>
+        {stats.map(({id, label, percentage}) => (
+            <li key={id}>
+            <span class="label">{label}</span>
+            <span class="percentage">{percentage}%</span>
           </li>
         ))}
     </ul>
@@ -18,10 +18,10 @@ export const Statistics = ({title, stats}) => {
 Statistics.propTypes = {
     title: propTypes.string.isRequired,
     stats: propTypes.arrayOf(
-      propTypes.shape({
-        id: propTypes.string,
-        label: propTypes.string,
-        percentage: propTypes.number,
+      propTypes.exact({
+        id: propTypes.string.isRequired,
+        label: propTypes.string.isRequired,
+        percentage: propTypes.number.isRequired,
       })
-    ).isRequired
+    )
 }
