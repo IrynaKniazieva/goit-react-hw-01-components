@@ -25,9 +25,9 @@ export const App = () => {
       <FriendList
       friends = {friends}/>
       <TransactionHistory
-      column1="Type"
-      column2="Amount"
-      column3="Currency"
+      column1="TYPE"
+      column2="AMOUNT"
+      column3="CURRENCY"
       transactions= {transactions}/>
       
     </div>
