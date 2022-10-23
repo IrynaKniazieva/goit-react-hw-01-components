@@ -5,7 +5,8 @@
     align-items: center;
     margin: 0 auto;
     margin-top: 50px;
-    padding: 20px;
+    margin-bottom: 50px;
+    /* padding: 20px; */
     width: 320px;
     height: 370px;
     background-color: #e7ecf2;
