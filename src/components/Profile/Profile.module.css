@@ -6,7 +6,6 @@
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
-    /* padding: 20px; */
     width: 320px;
     height: 370px;
     background-color: #e7ecf2;
@@ -53,7 +52,6 @@
     height: 70px;
     border-radius: 0px 0px 3px 3px;
     border-top: 0.5px solid #d6dce1;
-
 }
 
 .statsList {
@@ -68,7 +66,6 @@
 
 .statsList:first-child {
     border-left: 0px;
-
 }
 
 .label {

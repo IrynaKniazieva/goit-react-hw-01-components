@@ -44,8 +44,6 @@ Profile.propTypes = {
         views: propTypes.number.isRequired,
         likes: propTypes.number.isRequired,
       })
-    
-    
     }
 
 
