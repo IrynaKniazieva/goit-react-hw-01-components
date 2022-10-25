@@ -1,13 +1,13 @@
 import styles from './TransactionHistory.module.css'
 import propTypes from 'prop-types'
 
-export const TransactionHistory = ({column1, column2, column3, transactions}) => {
+export const TransactionHistory = ({ transactions }) => {
     return <table className={styles.transactionHistory}>
     <thead className={styles.tableHead}>
       <tr className={styles.tableRow}>
-        <th className={styles.tableHeader}>{column1}</th>
-        <th className={styles.tableHeader}>{column2}</th>
-        <th className={styles.tableHeader}>{column3}</th>
+        <th className={styles.tableHeader}>TYPE</th>
+        <th className={styles.tableHeader}>AMOUNT</th>
+        <th className={styles.tableHeader}>CURRENCY</th>
       </tr>
     </thead>
   
@@ -25,9 +25,6 @@ export const TransactionHistory = ({column1, column2, column3, transactions}) =>
 }
 
 TransactionHistory.propTypes = {
-    column1: propTypes.string.isRequired,
-    column2: propTypes.string.isRequired,
-    column3: propTypes.string.isRequired,
     transactions: propTypes.arrayOf(
         propTypes.exact({
           id: propTypes.string.isRequired,
@@ -35,5 +32,5 @@ TransactionHistory.propTypes = {
           amount: propTypes.string.isRequired,
           currency: propTypes.string.isRequired,
         })
-      )
+      ).isRequired
 }

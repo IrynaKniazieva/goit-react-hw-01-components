@@ -19,14 +19,14 @@ export const Statistics = ({title, stats}) => {
 }
 
 Statistics.propTypes = {
-    title: propTypes.string.isRequired,
+    title: propTypes.string,
     stats: propTypes.arrayOf(
       propTypes.exact({
         id: propTypes.string.isRequired,
         label: propTypes.string.isRequired,
         percentage: propTypes.number.isRequired,
       })
-    )
+    ).isRequired
 }
 
 // функция для генерации случайного цвета из 6 ДЗ JS
